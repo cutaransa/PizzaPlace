@@ -18,70 +18,16 @@ app.config(['$provide', '$routeProvider', '$httpProvider', function ($provide, $
         controller: 'ForgotPasswordController',
         controllerAs: 'vm'
     });
-    $routeProvider.when('/billings', {
-        title: 'Billings',
-        templateUrl: 'App/Billings',
-        controller: 'BillingsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/cards', {
-        title: 'Cards',
-        templateUrl: 'App/Cards',
-        controller: 'CardsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/card-batches', {
-        title: 'CardBatches',
-        templateUrl: 'App/CardBatches',
-        controller: 'CardBatchesController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/card-types', {
-        title: 'CardTypes',
-        templateUrl: 'App/CardTypes',
-        controller: 'CardTypesController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/customer-details/:id', {
-        title: 'Customer Details',
-        templateUrl: 'App/CustomerDetails',
-        controller: 'CustomerDetailsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/customers', {
-        title: 'Customers',
-        templateUrl: 'App/Customers',
-        controller: 'CustomersController',
-        controllerAs: 'vm'
-    });
     $routeProvider.when('/dashboard', {
         title: 'Dashboard',
         templateUrl: 'App/Dashboard',
         controller: 'DashboardController',
         controllerAs: 'vm'
     });
-    $routeProvider.when('/email-campaigns', {
-        title: 'Email Campaigns',
-        templateUrl: 'App/EmailCampaigns',
-        controller: 'EmailCampaignsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/email-campaigns/editor', {
-        title: 'Email Campaigns - Editor',
-        templateUrl: '../Assets/app/templates/EmailCampaignsEditor.html',
-        controller: 'EmailCampaignsModalController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/machines', {
-        title: 'Machines',
-        templateUrl: 'App/Machines',
-        controller: 'MachinesController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/merchants', {
-        title: 'Merchants',
-        templateUrl: 'App/Merchants',
-        controller: 'MerchantsController',
+    $routeProvider.when('/categories', {
+        title: 'Categories',
+        templateUrl: 'App/Categories',
+        controller: 'CategoriesController',
         controllerAs: 'vm'
     });
     $routeProvider.when('/modules', {
@@ -90,58 +36,22 @@ app.config(['$provide', '$routeProvider', '$httpProvider', function ($provide, $
         controller: 'ModulesController',
         controllerAs: 'vm'
     });
-    $routeProvider.when('/push-notification-campaigns', {
-        title: 'Push Notification Campaigns',
-        templateUrl: 'App/PushNotificationCampaigns',
-        controller: 'PushNotificationCampaignsController',
+    $routeProvider.when('/pizzas', {
+        title: 'Pizzas',
+        templateUrl: 'App/Pizzas',
+        controller: 'PizzasController',
         controllerAs: 'vm'
     });
-    $routeProvider.when('/push-notification-campaigns/editor', {
-        title: 'Push Notification Campaigns - Editor',
-        templateUrl: '../Assets/app/templates/PushNotificationCampaignsEditor.html',
-        controller: 'PushNotificationCampaignsModalController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/reports', {
-        title: 'Reports',
-        templateUrl: '../Assets/app/templates/Reports.html',
-        controller: 'ReportsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/requests', {
-        title: 'Requests',
-        templateUrl: 'App/Requests',
-        controller: 'RequestsController',
+    $routeProvider.when('/types', {
+        title: 'Types',
+        templateUrl: 'App/PizzaTypes',
+        controller: 'PizzaTypesController',
         controllerAs: 'vm'
     });
     $routeProvider.when('/roles' , {
         title: 'Roles',
         templateUrl: 'App/Roles',
         controller: 'RolesController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/sms-campaigns', {
-        title: 'Sms Campaigns',
-        templateUrl: 'App/SmsCampaigns',
-        controller: 'SmsCampaignsController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/sms-campaigns/editor', {
-        title: 'Sms Campaigns - Editor',
-        templateUrl: '../Assets/app/templates/SmsCampaignsEditor.html',
-        controller: 'SmsCampaignsModalController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/sms-inboxes', {
-        title: 'Sms Inboxes',
-        templateUrl: 'App/SmsInboxes',
-        controller: 'SmsInboxesController',
-        controllerAs: 'vm'
-    });
-    $routeProvider.when('/tags', {
-        title: 'Tags',
-        templateUrl: 'App/Tags',
-        controller: 'TagsController',
         controllerAs: 'vm'
     });
     $routeProvider.when('/users', {

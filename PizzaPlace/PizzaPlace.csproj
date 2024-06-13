@@ -273,6 +273,11 @@
     <Compile Include="Core\IUnitOfWork.cs" />
     <Compile Include="Core\Models\Administrator.cs" />
     <Compile Include="Core\Models\ApplicationUser.cs" />
+    <Compile Include="Core\Models\OrderDetail.cs" />
+    <Compile Include="Core\Models\Order.cs" />
+    <Compile Include="Core\Models\Category.cs" />
+    <Compile Include="Core\Models\Pizza.cs" />
+    <Compile Include="Core\Models\PizzaType.cs" />
     <Compile Include="Core\Models\Module.cs" />
     <Compile Include="Core\Models\RoleModule.cs" />
     <Compile Include="Core\PasswordValidations\HasLowerChar.cs" />
@@ -284,6 +289,9 @@
     <Compile Include="Core\Providers\NinjectWebCommon.cs" />
     <Compile Include="Core\Providers\RefreshTokenProvider.cs" />
     <Compile Include="Core\Repositories\IAdministatorRepository.cs" />
+    <Compile Include="Core\Repositories\IPizzaRepository.cs" />
+    <Compile Include="Core\Repositories\IPizzaTypeRepository.cs" />
+    <Compile Include="Core\Repositories\ICategoryRepository.cs" />
     <Compile Include="Core\Repositories\IModuleRepository.cs" />
     <Compile Include="Core\Repositories\IRoleModuleRepository.cs" />
     <Compile Include="Core\Repositories\IRoleRepository.cs" />
@@ -298,10 +306,21 @@
     <Compile Include="Migrations\202406131710010_InitialDatabase.Designer.cs">
       <DependentUpon>202406131710010_InitialDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406131952529_AddedItemAndTransactions.cs" />
+    <Compile Include="Migrations\202406131952529_AddedItemAndTransactions.Designer.cs">
+      <DependentUpon>202406131952529_AddedItemAndTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406132105076_AddedCodeOnPizza.cs" />
+    <Compile Include="Migrations\202406132105076_AddedCodeOnPizza.Designer.cs">
+      <DependentUpon>202406132105076_AddedCodeOnPizza.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Persistence\IApplicationDbContext.cs" />
     <Compile Include="Persistence\Repositories\AdministratorRepository.cs" />
+    <Compile Include="Persistence\Repositories\PizzaRepository.cs" />
+    <Compile Include="Persistence\Repositories\PizzaTypeRepository.cs" />
+    <Compile Include="Persistence\Repositories\CategoryRepository.cs" />
     <Compile Include="Persistence\Repositories\ModuleRepository.cs" />
     <Compile Include="Persistence\Repositories\RoleModuleRepository.cs" />
     <Compile Include="Persistence\Repositories\RoleRepository.cs" />
@@ -322,6 +341,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202406131710010_InitialDatabase.resx">
       <DependentUpon>202406131710010_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406131952529_AddedItemAndTransactions.resx">
+      <DependentUpon>202406131952529_AddedItemAndTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406132105076_AddedCodeOnPizza.resx">
+      <DependentUpon>202406132105076_AddedCodeOnPizza.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

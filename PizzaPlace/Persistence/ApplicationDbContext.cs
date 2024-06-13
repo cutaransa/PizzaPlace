@@ -17,7 +17,12 @@ namespace PizzaPlace.Persistence
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         public DbSet<Administrator> Administrators { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Module> Modules { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<PizzaType> PizzaTypes { get; set; }
         public DbSet<RoleModule> RoleModules { get; set; }
 
         public ApplicationDbContext()

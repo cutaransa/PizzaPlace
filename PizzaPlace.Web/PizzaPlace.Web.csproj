@@ -291,8 +291,11 @@
     <Content Include="Assets\app\app.config.js" />
     <Content Include="Assets\app\app.module.js" />
     <Content Include="Assets\app\app.route.js" />
+    <Content Include="Assets\app\controllers\pizzas.controller.js" />
+    <Content Include="Assets\app\controllers\pizza-types.controller.js" />
     <Content Include="Assets\app\controllers\dashboard.controller.js" />
     <Content Include="Assets\app\controllers\forgot-password.controller.js" />
+    <Content Include="Assets\app\controllers\categories.controller.js" />
     <Content Include="Assets\app\controllers\modules.controller.js" />
     <Content Include="Assets\app\controllers\reset-password.controller.js" />
     <Content Include="Assets\app\controllers\roles.controller.js" />
@@ -300,8 +303,11 @@
     <Content Include="Assets\app\controllers\user-profile.controller.js" />
     <Content Include="Assets\app\controllers\users.controller.js" />
     <Content Include="Assets\app\directives\utility.directives.js" />
+    <Content Include="Assets\app\services\pizzas.factory.js" />
+    <Content Include="Assets\app\services\pizzaTypes.factory.js" />
     <Content Include="Assets\app\services\dashboard.factory.js" />
     <Content Include="Assets\app\services\dataService.factory.js" />
+    <Content Include="Assets\app\services\categories.factory.js" />
     <Content Include="Assets\app\services\modules.factory.js" />
     <Content Include="Assets\app\services\roles.factory.js" />
     <Content Include="Assets\app\services\userProfile.factory.js" />
@@ -527,7 +533,10 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\WebApi\AccountController.cs" />
+    <Compile Include="Controllers\WebApi\PizzasController.cs" />
+    <Compile Include="Controllers\WebApi\PizzaTypesController.cs" />
     <Compile Include="Controllers\WebApi\ModulesController.cs" />
+    <Compile Include="Controllers\WebApi\CategoriesController.cs" />
     <Compile Include="Controllers\WebApi\RolesController.cs" />
     <Compile Include="Controllers\WebApi\UserProfileController.cs" />
     <Compile Include="Controllers\WebApi\UsersController.cs" />
@@ -535,6 +544,9 @@
     <Compile Include="Core\Dtos\AccountViewModel.cs" />
     <Compile Include="Core\Dtos\GetUserDto.cs" />
     <Compile Include="Core\Dtos\Model\AdministratorDto.cs" />
+    <Compile Include="Core\Dtos\Model\PizzaDto.cs" />
+    <Compile Include="Core\Dtos\Model\PizzaTypeDto.cs" />
+    <Compile Include="Core\Dtos\Model\CategoryDto.cs" />
     <Compile Include="Core\Dtos\Model\ModuleDto.cs" />
     <Compile Include="Core\Dtos\Model\RoleDto.cs" />
     <Compile Include="Core\Dtos\Model\UserDto.cs" />
@@ -586,6 +598,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\App\Categories.cshtml" />
+    <Content Include="Views\App\CategoriesEditor.cshtml" />
+    <Content Include="Views\App\PizzaTypes.cshtml" />
+    <Content Include="Views\App\PizzaTypesEditor.cshtml" />
+    <Content Include="Views\App\Pizzas.cshtml" />
+    <Content Include="Views\App\PizzasEditor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

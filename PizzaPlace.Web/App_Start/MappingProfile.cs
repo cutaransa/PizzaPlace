@@ -12,16 +12,25 @@ namespace PizzaPlace.Web.App_Start
         public MappingProfile()
         {
             CreateMap<Administrator, AdministratorDto>();
+            CreateMap<Category, CategoryDto>();
+            CreateMap<Pizza, PizzaDto>();
+            CreateMap<PizzaType, PizzaTypeDto>();
             CreateMap<IdentityRole, RoleDto>();
             CreateMap<ApplicationUser, UserDto>();
 
 
             CreateMap<Administrator, ListAdministratorDto>();
+            CreateMap<Category, ListCategoryDto>();
+            CreateMap<Pizza, ListPizzaDto>();
+            CreateMap<PizzaType, ListPizzaTypeDto>();
             CreateMap<IdentityRole, ListRoleDto>();
             CreateMap<ApplicationUser, ListUserDto>();
 
 
             CreateMap<Administrator, ViewAdministratorDto>();
+            CreateMap<Category, ViewCategoryDto>();
+            CreateMap<Pizza, ViewPizzaDto>();
+            CreateMap<PizzaType, ViewPizzaTypeDto>();
             CreateMap<IdentityRole, ViewRoleDto>();
             CreateMap<ApplicationUser, ViewUserDto>();
         }

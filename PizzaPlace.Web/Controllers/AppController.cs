@@ -4,15 +4,13 @@ namespace PizzaPlace.Web.Controllers
 {
     public class AppController : Controller
     {
-        public ActionResult SignIn()
+        [Authorize]
+        public ActionResult Categories()
         {
             return PartialView();
         }
-        public ActionResult ForgotPassword()
-        {
-            return PartialView();
-        }
-        public ActionResult ResetPassword()
+        [Authorize]
+        public ActionResult CategoriesEditor()
         {
             return PartialView();
         }
@@ -22,12 +20,11 @@ namespace PizzaPlace.Web.Controllers
             return PartialView();
         }
         [Authorize]
-        public ActionResult CustomerDetails()
+        public ActionResult Dashboard()
         {
             return PartialView();
         }
-        [Authorize]
-        public ActionResult Dashboard()
+        public ActionResult ForgotPassword()
         {
             return PartialView();
         }
@@ -42,6 +39,30 @@ namespace PizzaPlace.Web.Controllers
             return PartialView();
         }
         [Authorize]
+        public ActionResult Pizzas()
+        {
+            return PartialView();
+        }
+        [Authorize]
+        public ActionResult PizzasEditor()
+        {
+            return PartialView();
+        }
+        [Authorize]
+        public ActionResult PizzaTypes()
+        {
+            return PartialView();
+        }
+        [Authorize]
+        public ActionResult PizzaTypesEditor()
+        {
+            return PartialView();
+        }
+        public ActionResult ResetPassword()
+        {
+            return PartialView();
+        }
+        [Authorize]
         public ActionResult Roles()
         {
             return PartialView();
@@ -51,13 +72,17 @@ namespace PizzaPlace.Web.Controllers
         {
             return PartialView();
         }
-        [Authorize]
-        public ActionResult Users()
+        public ActionResult SignIn()
         {
             return PartialView();
         }
         [Authorize]
         public ActionResult UserProfile()
+        {
+            return PartialView();
+        }
+        [Authorize]
+        public ActionResult Users()
         {
             return PartialView();
         }
