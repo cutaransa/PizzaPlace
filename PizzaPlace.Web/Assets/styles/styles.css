@@ -1,0 +1,105 @@
+﻿.no-border-bottom { border-bottom: 0 }
+
+.margin-up-down-0 { margin-top: 0px !important; margin-bottom: 0px !important }
+.margin-up-down-10 { margin-top: 10px !important; margin-bottom: 10px !important }
+.margin-up-down-15 { margin-top: 15px !important; margin-bottom: 15px !important }
+.margin-up-down-20 { margin-top: 20px !important; margin-bottom: 20px !important }
+.margin-up-down-30 { margin-top: 30px !important; margin-bottom: 30px !important }
+.margin-up-down-40 { margin-top: 40px !important; margin-bottom: 40px !important }
+.margin-up-down-50 { margin-top: 50px !important; margin-bottom: 50px !important }
+.margin-up-down-60 { margin-top: 60px !important; margin-bottom: 60px !important }
+.margin-up-down-70 { margin-top: 70px !important; margin-bottom: 70px !important }
+.margin-up-down-80 { margin-top: 80px !important; margin-bottom: 80px !important }
+.margin-up-down-90 { margin-top: 90px !important; margin-bottom: 90px !important }
+.margin-up-down-100 { margin-top: 100px !important; margin-bottom: 100px !important }
+
+.padding-up-down-0 { padding-top: 0px !important; padding-bottom: 0px !important }
+.padding-up-down-10 { padding-top: 10px !important; padding-bottom: 10px !important }
+.padding-up-down-15 { padding-top: 15px !important; padding-bottom: 15px !important }
+.padding-up-down-20 { padding-top: 20px !important; padding-bottom: 20px !important }
+.padding-up-down-30 { padding-top: 30px !important; padding-bottom: 30px !important }
+.padding-up-down-40 { padding-top: 40px !important; padding-bottom: 40px !important }
+.padding-up-down-50 { padding-top: 50px !important; padding-bottom: 50px !important }
+.padding-up-down-60 { padding-top: 60px !important; padding-bottom: 60px !important }
+.padding-up-down-70 { padding-top: 70px !important; padding-bottom: 70px !important }
+.padding-up-down-80 { padding-top: 80px !important; padding-bottom: 80px !important }
+.padding-up-down-90 { padding-top: 90px !important; padding-bottom: 90px !important }
+.padding-up-down-100 { padding-top: 100px !important; padding-bottom: 100px !important }
+
+.margin-up-0 { margin-top: 0px }
+.margin-up-10 { margin-top: 10px }
+.margin-up-15 { margin-top: 15px }
+.margin-up-20 { margin-top: 20px }
+.margin-up-30 { margin-top: 30px }
+.margin-up-40 { margin-top: 40px }
+.margin-up-50 { margin-top: 50px }
+.margin-up-60 { margin-top: 60px }
+.margin-up-70 { margin-top: 70px }
+.margin-up-80 { margin-top: 80px }
+.margin-up-90 { margin-top: 90px }
+.margin-up-100 { margin-top: 100px }
+
+.margin-down-0 { margin-bottom: 0px }
+.margin-down-10 { margin-bottom: 10px }
+.margin-down-15 { margin-bottom: 15px }
+.margin-down-20 { margin-bottom: 20px }
+.margin-down-30 { margin-bottom: 30px }
+.margin-down-40 { margin-bottom: 40px }
+.margin-down-50 { margin-bottom: 50px }
+.margin-down-60 { margin-bottom: 60px }
+.margin-down-70 { margin-bottom: 70px }
+.margin-down-80 { margin-bottom: 80px }
+.margin-down-90 { margin-bottom: 90px }
+.margin-down-100 { margin-bottom: 100px }
+
+.padding-up-0 { padding-top: 0px }
+.padding-up-10 { padding-top: 10px }
+.padding-up-15 { padding-top: 15px }
+.padding-up-20 { padding-top: 20px }
+.padding-up-30 { padding-top: 30px }
+.padding-up-40 { padding-top: 40px }
+.padding-up-50 { padding-top: 50px }
+.padding-up-60 { padding-top: 60px }
+.padding-up-70 { padding-top: 70px }
+.padding-up-80 { padding-top: 80px }
+.padding-up-90 { padding-top: 90px }
+.padding-up-100 { padding-top: 100px }
+
+.padding-down-0 { padding-bottom: 0px }
+.padding-down-10 { padding-bottom: 10px }
+.padding-down-15 { padding-bottom: 15px }
+.padding-down-20 { padding-bottom: 20px }
+.padding-down-30 { padding-bottom: 30px }
+.padding-down-40 { padding-bottom: 40px }
+.padding-down-50 { padding-bottom: 50px }
+.padding-down-60 { padding-bottom: 60px }
+.padding-down-70 { padding-bottom: 70px }
+.padding-down-80 { padding-bottom: 80px }
+.padding-down-90 { padding-bottom: 90px }
+.padding-down-100 { padding-bottom: 100px }
+
+.minwidth { width: auto !important }
+
+.nomargin { margin: 0px }
+
+.city-province-area {
+    width: 100% !important
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.btn-auto {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.backmodal {
+  z-index: -1 !important;
+}
+
+.frontmodal {
+  z-index: 1060 !important;
+}

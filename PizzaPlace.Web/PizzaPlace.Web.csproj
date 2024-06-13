@@ -47,14 +47,17 @@
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.5.1.1\lib\net462\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Contrib.WebApi, Version=1.0.10.25, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elmah.Contrib.WebApi.1.0.10.25\lib\net45\Elmah.Contrib.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -70,6 +73,12 @@
     </Reference>
     <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.8.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.8.14\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.8.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.8.14\lib\net451\Hangfire.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.4\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
@@ -198,6 +207,7 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.Cryptography.Pkcs, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Pkcs.8.0.0\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
@@ -278,14 +288,304 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Assets\app\app.config.js" />
+    <Content Include="Assets\app\app.module.js" />
+    <Content Include="Assets\app\app.route.js" />
+    <Content Include="Assets\app\controllers\dashboard.controller.js" />
+    <Content Include="Assets\app\controllers\forgot-password.controller.js" />
+    <Content Include="Assets\app\controllers\modules.controller.js" />
+    <Content Include="Assets\app\controllers\reset-password.controller.js" />
+    <Content Include="Assets\app\controllers\roles.controller.js" />
+    <Content Include="Assets\app\controllers\signIn.controller.js" />
+    <Content Include="Assets\app\controllers\user-profile.controller.js" />
+    <Content Include="Assets\app\controllers\users.controller.js" />
+    <Content Include="Assets\app\directives\utility.directives.js" />
+    <Content Include="Assets\app\services\dashboard.factory.js" />
+    <Content Include="Assets\app\services\dataService.factory.js" />
+    <Content Include="Assets\app\services\modules.factory.js" />
+    <Content Include="Assets\app\services\roles.factory.js" />
+    <Content Include="Assets\app\services\userProfile.factory.js" />
+    <Content Include="Assets\app\services\users.factory.js" />
+    <Content Include="Assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Assets\bootstrap\css\bootstrap.css" />
+    <Content Include="Assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Assets\bootstrap\fonts\font-awesome.css" />
+    <Content Include="Assets\bootstrap\fonts\font-awesome.min.css" />
+    <Content Include="Assets\bootstrap\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\bootstrap\js\bootstrap.js" />
+    <Content Include="Assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\images\ajax-loader.gif" />
+    <Content Include="Assets\images\android-icon-144x144.png" />
+    <Content Include="Assets\images\android-icon-192x192.png" />
+    <Content Include="Assets\images\android-icon-36x36.png" />
+    <Content Include="Assets\images\android-icon-48x48.png" />
+    <Content Include="Assets\images\android-icon-72x72.png" />
+    <Content Include="Assets\images\android-icon-96x96.png" />
+    <Content Include="Assets\images\apple-icon-114x114.png" />
+    <Content Include="Assets\images\apple-icon-120x120.png" />
+    <Content Include="Assets\images\apple-icon-144x144.png" />
+    <Content Include="Assets\images\apple-icon-152x152.png" />
+    <Content Include="Assets\images\apple-icon-180x180.png" />
+    <Content Include="Assets\images\apple-icon-57x57.png" />
+    <Content Include="Assets\images\apple-icon-60x60.png" />
+    <Content Include="Assets\images\apple-icon-72x72.png" />
+    <Content Include="Assets\images\apple-icon-76x76.png" />
+    <Content Include="Assets\images\apple-icon-precomposed.png" />
+    <Content Include="Assets\images\apple-icon.png" />
+    <Content Include="Assets\images\browserconfig.xml" />
+    <Content Include="Assets\images\clearButton.png" />
+    <Content Include="Assets\images\colbtn-aggrfunc.png" />
+    <Content Include="Assets\images\condbtn-addcondition.png" />
+    <Content Include="Assets\images\condbtn-addpredicate.png" />
+    <Content Include="Assets\images\condbtn-delete.png" />
+    <Content Include="Assets\images\condbtn-disabled.png" />
+    <Content Include="Assets\images\condbtn-enabled.png" />
+    <Content Include="Assets\images\condbtn-param.png" />
+    <Content Include="Assets\images\customer-plus-site-logo.png" />
+    <Content Include="Assets\images\customer_plus.png" />
+    <Content Include="Assets\images\eqjs-ep-add-columns-hover.png" />
+    <Content Include="Assets\images\eqjs-ep-add-columns.png" />
+    <Content Include="Assets\images\eqjs-ep-add-cond-hover.png" />
+    <Content Include="Assets\images\eqjs-ep-add-cond.png" />
+    <Content Include="Assets\images\eqjs-ep-deselect-all-hover.png" />
+    <Content Include="Assets\images\eqjs-ep-deselect-all.png" />
+    <Content Include="Assets\images\eqjs-ep-select-all-hover.png" />
+    <Content Include="Assets\images\eqjs-ep-select-all.png" />
+    <Content Include="Assets\images\execute.png" />
+    <Content Include="Assets\images\favicon-16x16.png" />
+    <Content Include="Assets\images\favicon-32x32.png" />
+    <Content Include="Assets\images\favicon-96x96.png" />
+    <Content Include="Assets\images\favicon.ico" />
+    <Content Include="Assets\images\loadButton.png" />
+    <Content Include="Assets\images\logo-navbar.jpg" />
+    <Content Include="Assets\images\logo-signin.jpg" />
+    <Content Include="Assets\images\ms-icon-144x144.png" />
+    <Content Include="Assets\images\ms-icon-150x150.png" />
+    <Content Include="Assets\images\ms-icon-310x310.png" />
+    <Content Include="Assets\images\ms-icon-70x70.png" />
+    <Content Include="Assets\images\new_customer_plus.png" />
+    <Content Include="Assets\images\node-close.png" />
+    <Content Include="Assets\images\node-open.png" />
+    <Content Include="Assets\images\saveButton.png" />
+    <Content Include="Assets\images\sorting_asc.png" />
+    <Content Include="Assets\images\sorting_desc.png" />
+    <Content Include="Assets\images\sorting_none.png" />
+    <Content Include="Assets\images\ve-loader.gif" />
+    <Content Include="Assets\jquery\jquery-ui.js" />
+    <Content Include="Assets\jquery\jquery-ui.min.js" />
+    <Content Include="Assets\jquery\jquery.js" />
+    <Content Include="Assets\jquery\themes\base\accordion.css" />
+    <Content Include="Assets\jquery\themes\base\all.css" />
+    <Content Include="Assets\jquery\themes\base\autocomplete.css" />
+    <Content Include="Assets\jquery\themes\base\base.css" />
+    <Content Include="Assets\jquery\themes\base\button.css" />
+    <Content Include="Assets\jquery\themes\base\core.css" />
+    <Content Include="Assets\jquery\themes\base\datepicker.css" />
+    <Content Include="Assets\jquery\themes\base\dialog.css" />
+    <Content Include="Assets\jquery\themes\base\draggable.css" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_444444_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_555555_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_777620_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_777777_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Assets\jquery\themes\base\jquery-ui.css" />
+    <Content Include="Assets\jquery\themes\base\jquery-ui.min.css" />
+    <Content Include="Assets\jquery\themes\base\menu.css" />
+    <Content Include="Assets\jquery\themes\base\progressbar.css" />
+    <Content Include="Assets\jquery\themes\base\resizable.css" />
+    <Content Include="Assets\jquery\themes\base\selectable.css" />
+    <Content Include="Assets\jquery\themes\base\selectmenu.css" />
+    <Content Include="Assets\jquery\themes\base\slider.css" />
+    <Content Include="Assets\jquery\themes\base\sortable.css" />
+    <Content Include="Assets\jquery\themes\base\spinner.css" />
+    <Content Include="Assets\jquery\themes\base\tabs.css" />
+    <Content Include="Assets\jquery\themes\base\theme.css" />
+    <Content Include="Assets\jquery\themes\base\tooltip.css" />
+    <Content Include="Assets\misc\base64.js" />
+    <Content Include="Assets\misc\bootbox.min.js" />
+    <Content Include="Assets\misc\bootstrap-angular-validation-all.min.js" />
+    <Content Include="Assets\misc\easychart.js" />
+    <Content Include="Assets\misc\eq.all.min.js" />
+    <Content Include="Assets\misc\eq.view.basic.js" />
+    <Content Include="Assets\misc\eq.view.grid.js" />
+    <Content Include="Assets\misc\eq.view.report.js" />
+    <Content Include="Assets\misc\html2canvas.js" />
+    <Content Include="Assets\misc\jquery.base64.js" />
+    <Content Include="Assets\misc\jspdf.js" />
+    <Content Include="Assets\misc\loading-bar.js" />
+    <Content Include="Assets\misc\loading-bar.min.js" />
+    <Content Include="Assets\misc\metisMenu.js" />
+    <Content Include="Assets\misc\metisMenu.min.js" />
+    <Content Include="Assets\misc\modernizr-2.6.2.js" />
+    <Content Include="Assets\misc\please-wait.js" />
+    <Content Include="Assets\misc\please-wait.min.js" />
+    <Content Include="Assets\misc\respond.min.js" />
+    <Content Include="Assets\misc\sb-admin-2.js" />
+    <Content Include="Assets\misc\sb-admin-2.min.js" />
+    <Content Include="Assets\misc\sprintf.js" />
+    <Content Include="Assets\misc\tableExport.js" />
+    <Content Include="Assets\misc\textAngular-rangy.min.js" />
+    <Content Include="Assets\misc\textAngular-sanitize.js" />
+    <Content Include="Assets\misc\textAngular-sanitize.min.js" />
+    <Content Include="Assets\misc\textAngular.js" />
+    <Content Include="Assets\misc\textAngular.min.js" />
+    <Content Include="Assets\misc\toaster.js" />
+    <Content Include="Assets\misc\toaster.min.js" />
+    <Content Include="Assets\misc\ui-bootstrap-custom-2.5.0.js" />
+    <Content Include="Assets\misc\ui-bootstrap-custom-2.5.0.min.js" />
+    <Content Include="Assets\misc\ui-bootstrap-custom-tpls-2.5.0.js" />
+    <Content Include="Assets\misc\ui-bootstrap-custom-tpls-2.5.0.min.js" />
+    <Content Include="Assets\ng\angular-animate.js" />
+    <Content Include="Assets\ng\angular-animate.min.js" />
+    <Content Include="Assets\ng\angular-chart.js" />
+    <Content Include="Assets\ng\angular-chart.min.js" />
+    <Content Include="Assets\ng\angular-cookies.min.js" />
+    <Content Include="Assets\ng\angular-filter.js" />
+    <Content Include="Assets\ng\angular-filter.min.js" />
+    <Content Include="Assets\ng\angular-resource.min.js" />
+    <Content Include="Assets\ng\angular-route.min.js" />
+    <Content Include="Assets\ng\angular-touch.js" />
+    <Content Include="Assets\ng\angular-touch.min.js" />
+    <Content Include="Assets\ng\angular.min.js" />
+    <Content Include="Assets\ng\Chart.js" />
+    <Content Include="Assets\ng\checklist-model.js" />
+    <Content Include="Assets\ng\ng-table.min.js" />
+    <Content Include="Assets\ng\ngMask.min.js" />
+    <Content Include="Assets\ng\ui-grid.min.js" />
+    <Content Include="Assets\styles\easychart.css" />
+    <Content Include="Assets\styles\easyquery.css" />
+    <Content Include="Assets\styles\eq-icons-default.css" />
+    <Content Include="Assets\styles\eqview.css" />
+    <Content Include="Assets\styles\Images\ajax-loader.gif" />
+    <Content Include="Assets\styles\Images\clearButton.png" />
+    <Content Include="Assets\styles\Images\colbtn-aggrfunc.png" />
+    <Content Include="Assets\styles\Images\condbtn-addcondition.png" />
+    <Content Include="Assets\styles\Images\condbtn-addpredicate.png" />
+    <Content Include="Assets\styles\Images\condbtn-delete.png" />
+    <Content Include="Assets\styles\Images\condbtn-disabled.png" />
+    <Content Include="Assets\styles\Images\condbtn-enabled.png" />
+    <Content Include="Assets\styles\Images\condbtn-param.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-add-columns-hover.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-add-columns.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-add-cond-hover.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-add-cond.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-deselect-all-hover.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-deselect-all.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-select-all-hover.png" />
+    <Content Include="Assets\styles\Images\eqjs-ep-select-all.png" />
+    <Content Include="Assets\styles\Images\execute.png" />
+    <Content Include="Assets\styles\Images\loadButton.png" />
+    <Content Include="Assets\styles\Images\logo.png" />
+    <Content Include="Assets\styles\Images\node-close.png" />
+    <Content Include="Assets\styles\Images\node-open.png" />
+    <Content Include="Assets\styles\Images\saveButton.png" />
+    <Content Include="Assets\styles\Images\sorting_asc.png" />
+    <Content Include="Assets\styles\Images\sorting_desc.png" />
+    <Content Include="Assets\styles\Images\sorting_none.png" />
+    <Content Include="Assets\styles\Images\ve-loader.gif" />
+    <Content Include="Assets\styles\loading-bar.css" />
+    <Content Include="Assets\styles\loading-bar.min.css" />
+    <Content Include="Assets\styles\metisMenu.css" />
+    <Content Include="Assets\styles\metisMenu.min.css" />
+    <Content Include="Assets\styles\ng-table.min.css" />
+    <Content Include="Assets\styles\please-wait.css" />
+    <Content Include="Assets\styles\sb-admin-2.css" />
+    <Content Include="Assets\styles\sb-admin-2.min.css" />
+    <Content Include="Assets\styles\styles.css" />
+    <Content Include="Assets\styles\textAngular.css" />
+    <Content Include="Assets\styles\toaster.css" />
+    <Content Include="Assets\styles\toaster.min.css" />
+    <Content Include="Assets\styles\ui-bootstrap-custom-2.5.0-csp.css" />
+    <Content Include="Assets\styles\ui-grid.min.css" />
+    <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\HangfireAuthorizationFilter.cs" />
+    <Compile Include="App_Start\MappingProfile.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AppController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\WebApi\AccountController.cs" />
+    <Compile Include="Controllers\WebApi\ModulesController.cs" />
+    <Compile Include="Controllers\WebApi\RolesController.cs" />
+    <Compile Include="Controllers\WebApi\UserProfileController.cs" />
+    <Compile Include="Controllers\WebApi\UsersController.cs" />
+    <Compile Include="Core\Dtos\AccountBindingModel.cs" />
+    <Compile Include="Core\Dtos\AccountViewModel.cs" />
+    <Compile Include="Core\Dtos\GetUserDto.cs" />
+    <Compile Include="Core\Dtos\Model\AdministratorDto.cs" />
+    <Compile Include="Core\Dtos\Model\ModuleDto.cs" />
+    <Compile Include="Core\Dtos\Model\RoleDto.cs" />
+    <Compile Include="Core\Dtos\Model\UserDto.cs" />
+    <Compile Include="Core\Utilities\ApplicationOAuthProvider.cs" />
+    <Compile Include="Core\Utilities\CustomAuthorizationAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Assets\bootstrap\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\bootstrap\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\bootstrap\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\bootstrap\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\bootstrap\fonts\FontAwesome.otf" />
+    <Content Include="Assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\images\manifest.json" />
+    <Content Include="Assets\misc\sb-admin-2.min.js.map" />
+    <Content Include="Assets\misc\toaster.min.js.map" />
+    <Content Include="Assets\ng\angular-animate.min.js.map" />
+    <Content Include="Assets\ng\angular-cookies.min.js.map" />
+    <Content Include="Assets\ng\angular-resource.min.js.map" />
+    <Content Include="Assets\ng\angular-route.min.js.map" />
+    <Content Include="Assets\ng\angular.min.js.map" />
+    <Content Include="Assets\ng\ngMask.min.map" />
+    <Content Include="Assets\styles\toaster.scss" />
+    <Content Include="Assets\styles\ui-grid.ttf" />
+    <Content Include="Assets\styles\ui-grid.woff" />
     <None Include="packages.config" />
+    <Content Include="Views\App\ChangePassword.cshtml" />
+    <Content Include="Views\App\Dashboard.cshtml" />
+    <Content Include="Views\App\ForgotPassword.cshtml" />
+    <Content Include="Views\App\Modules.cshtml" />
+    <Content Include="Views\App\ModulesEditor.cshtml" />
+    <Content Include="Views\App\ResetPassword.cshtml" />
+    <Content Include="Views\App\Roles.cshtml" />
+    <Content Include="Views\App\RolesEditor.cshtml" />
+    <Content Include="Views\App\SignIn.cshtml" />
+    <Content Include="Views\App\UserProfile.cshtml" />
+    <Content Include="Views\App\Users.cshtml" />
+    <Content Include="Views\App\UsersEditor.cshtml" />
+    <Content Include="Views\Main\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -295,10 +595,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Core\" />
-    <Folder Include="Views\" />
+    <Folder Include="Assets\app\templates\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PizzaPlace\PizzaPlace.csproj">
@@ -321,7 +618,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55161</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44339/</IISUrl>
+          <IISUrl>http://localhost:44338/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
