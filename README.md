@@ -1,6 +1,6 @@
 # ASP.NET & EntityFramework Pizza Place Sales
 
-This template is a 24 hour code challenge / project for Ehrlich
+This is my 24 hour code challenge / project for Ehrlich
 using ASP.NET and EntityFramework for backend and AngularJS for frontend.
 
 ## Prerequirements
