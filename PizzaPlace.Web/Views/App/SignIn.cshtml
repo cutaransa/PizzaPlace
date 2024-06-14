@@ -1,0 +1,68 @@
+﻿<div id="modal" 
+     class="modal show" 
+     tabindex="-1" 
+     role="dialog" 
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" align="center">
+                <span class="navbar-text-logo">Pizza Place Sales</span>
+            </div>
+            <div class="modal-body v-spacer-20">
+                <div class="row center-block">
+                    <div class="col-md-12">
+                        <form novalidate name="newSignInForm" class="form-vertical" ng-submit="vm.signIn()">
+                            <div class="form-group">
+                                <div class="alert alert-danger" ng-show="vm.showMessage">{{ vm.message }}</div>
+                            </div>
+                            <div class="form-group">
+                                <div class="alert alert-success" ng-show="vm.message == 'ended'"><h4>Due to inactivity, you were logged out automatically.</h4></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="emailAddress" class="control-label">Username</label>
+                                <div class="input-group input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <input class="form-control input"
+                                           name="emailAddress"
+                                           type="text"
+                                           placeholder="Username"
+                                           required
+                                           ng-model="vm.newSignIn.username" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <div class="input-group input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                    <input class="form-control input"
+                                           name="password"
+                                           type="password"
+                                           placeholder="Password"
+                                           required
+                                           ng-model="vm.newSignIn.password"
+                                           ng-minlength="6" />
+                                </div>
+                            </div>
+                            <div class="form-group v-spacer-40">
+                                <input class="btn btn-primary btn-block" type="submit" value="Sign In" />
+                            </div>
+                            <div class="form-group">
+                                @*<input type="checkbox" value="rememberMe" ng-model="vm.rememberMe" />&nbsp;Remember Me?*@
+                                <a href="#!/forgot-password" class="btn btn-link pull-right">Forgot Password</a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer footer v-spacer-20">
+                <div class="row center-block">
+                    <div class="col-md-12">
+                        <span class="pull-left">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿<div class="modal-content">
+    <form novalidate name="vm.userForm" class="form-vertical" ng-submit="vm.save()">
+        <div class="modal-header">
+            <button type="button" class="close" ng-click="vm.cancel()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">{{ vm.headerTitle }}</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row center-block">
+                <div class="col-md-12">
+                    <div class="form-vertical">
+                        <div class="form-group" ng-show="vm.showMessage">
+                            <div class="alert alert-danger">
+                                <span ng-repeat="message in vm.errorMessages">
+                                    {{ message }}<br />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="code" class="control-label">Code *</label>
+                            <input class="form-control"
+                                   name="code"
+                                   type="text"
+                                   placeholder="Code"
+                                   required
+                                   ng-model="vm.pizzaType.code" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="control-label">Name *</label>
+                            <input class="form-control"
+                                   name="name"
+                                   type="text"
+                                   placeholder="Name"
+                                   required
+                                   ng-model="vm.pizzaType.name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="category"
+                                   class="control-label">
+                                Category *
+                            </label>
+                            <select class="form-control"
+                                    name="cardType"
+                                    ng-model="vm.pizzaType.categoryId"
+                                    ng-options="category.categoryId as category.name for category in vm.pizzaType.categories">
+                                <option value="">
+                                    -- Select Category --
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ingredients" class="control-label">Ingredients *</label>
+                            <input class="form-control"
+                                   name="name"
+                                   type="text"
+                                   placeholder="Ingredients"
+                                   required
+                                   ng-model="vm.pizzaType.ingredients" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" ng-click="vm.cancel()" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -17,7 +17,13 @@ namespace PizzaPlace.Persistence
     {
         IDbSet<ApplicationUser> Users { get; set; }
         DbSet<Administrator> Administrators { get; set; }
+        DbSet<Category> Categories { get; set; }
+        DbSet<File> Files { get; set; }
         DbSet<Module> Modules { get; set; }
+        DbSet<Order> Orders { get; set; }
+        DbSet<OrderDetail> OrderDetails { get; set; }
+        DbSet<Pizza> Pizzas { get; set; }
+        DbSet<PizzaType> PizzaTypes { get; set; }
         DbSet<RoleModule> RoleModules { get; set; }
     }
 }
