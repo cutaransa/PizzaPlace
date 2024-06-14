@@ -17,6 +17,7 @@ namespace PizzaPlace.Web.Core.Dtos.Model
 
     public class ViewPizzaDto : PizzaDto
     {
+        public ViewPizzaTypeDto pizzaType { get; set; }
         public IEnumerable<PizzaTypeDto> pizzaTypes { get; set; }
 
     }

@@ -1109,6 +1109,7 @@
     <Compile Include="Controllers\AppController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\WebApi\AccountController.cs" />
+    <Compile Include="Controllers\WebApi\DashboardController.cs" />
     <Compile Include="Controllers\WebApi\OrderDetailsController.cs" />
     <Compile Include="Controllers\WebApi\OrdersController.cs" />
     <Compile Include="Controllers\WebApi\PizzasController.cs" />
@@ -1134,6 +1135,7 @@
     <Compile Include="Core\Dtos\Model\ModuleDto.cs" />
     <Compile Include="Core\Dtos\Model\RoleDto.cs" />
     <Compile Include="Core\Dtos\Model\UserDto.cs" />
+    <Compile Include="Core\Dtos\Report\TransactionDto.cs" />
     <Compile Include="Core\Utilities\ApplicationOAuthProvider.cs" />
     <Compile Include="Core\Utilities\CustomAuthorizationAttribute.cs" />
     <Compile Include="Core\Utilities\MyExtensions.cs" />
@@ -1190,6 +1192,7 @@
     <Content Include="Views\App\PizzaTypesEditor.cshtml" />
     <Content Include="Views\App\Pizzas.cshtml" />
     <Content Include="Views\App\PizzasEditor.cshtml" />
+    <Content Include="Views\App\DashboardEditor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

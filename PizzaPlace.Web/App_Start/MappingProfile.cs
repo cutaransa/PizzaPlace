@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Ninject.Activation;
 using PizzaPlace.Core.Models;
 using PizzaPlace.Web.Core.Dtos.Model;
+using PizzaPlace.Web.Core.Dtos.Report;
 
 
 namespace PizzaPlace.Web.App_Start
@@ -33,6 +34,8 @@ namespace PizzaPlace.Web.App_Start
             CreateMap<PizzaType, ViewPizzaTypeDto>();
             CreateMap<IdentityRole, ViewRoleDto>();
             CreateMap<ApplicationUser, ViewUserDto>();
+
+            CreateMap<OrderDetail, TransactionDto>();
         }
     }
 }

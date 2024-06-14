@@ -24,6 +24,11 @@ namespace PizzaPlace.Web.Controllers
         {
             return PartialView();
         }
+        [Authorize]
+        public ActionResult DashboardEditor()
+        {
+            return PartialView();
+        }
         public ActionResult ForgotPassword()
         {
             return PartialView();
