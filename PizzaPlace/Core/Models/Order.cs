@@ -9,6 +9,8 @@ namespace PizzaPlace.Core.Models
     {
         [Key]
         public int OrderId { get; set; }
+        [Required]
+        public int FileOrderId { get; set; }
 
         public DateTime CreatedDate { get; set; }
 

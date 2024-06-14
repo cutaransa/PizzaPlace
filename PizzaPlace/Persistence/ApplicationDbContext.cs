@@ -18,6 +18,7 @@ namespace PizzaPlace.Persistence
     {
         public DbSet<Administrator> Administrators { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<File> Files { get; set; }
         public DbSet<Module> Modules { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }

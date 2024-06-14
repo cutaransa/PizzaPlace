@@ -10,7 +10,10 @@ namespace PizzaPlace.Persistence
 
         public IAdministratorRepository Administrators { get; set; }
         public ICategoryRepository Categories { get; set; }
+        public IFileRepository Files { get; set; }
         public IModuleRepository Modules { get; set; }
+        public IOrderRepository Orders { get; set; }
+        public IOrderDetailRepository OrderDetails { get; set; }
         public IPizzaRepository Pizzas { get; set; }
         public IPizzaTypeRepository PizzaTypes { get; set; }
         public IRoleModuleRepository RoleModules { get; set; }
@@ -23,7 +26,10 @@ namespace PizzaPlace.Persistence
 
             Administrators = new AdministratorRepository(context);
             Categories = new CategoryRepository(context);
+            Files = new FileRepository(context);
             Modules = new ModuleRepository(context);
+            Orders = new OrderRepository(context);
+            OrderDetails = new OrderDetailRepository(context);
             Pizzas = new PizzaRepository(context);
             PizzaTypes = new PizzaTypeRepository(context);
             RoleModules = new RoleModuleRepository(context);

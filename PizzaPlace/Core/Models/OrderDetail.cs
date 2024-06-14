@@ -10,6 +10,9 @@ namespace PizzaPlace.Core.Models
         [Key]
         public int DetailId { get; set; }
 
+        [Required]
+        public int FileDetailId { get; set; }
+
         public int Quantity { get; set; }
 
         [ForeignKey("Pizza")]
